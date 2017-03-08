@@ -11,7 +11,7 @@ source:
   md5: 00b516f4704d4a7cb50a1d97e6e8e15b
 
 build:
-  number: 0
+  number: 1
   features:
     - vc9  # [win and py27]
     - vc10  # [win and py34]
@@ -46,6 +46,7 @@ test:
     {% endfor %}
     - test -f ${PREFIX}/include/bzlib.h  # [unix]
     - test -f ${PREFIX}/lib/libbz2.a  # [unix]
+    - test -f ${PREFIX}/lib/libbz2.so  # [unix]
     - if not exist %LIBRARY_INC%\\bzlib.h exit 1  # [win]
     - if not exist %LIBRARY_LIB%\\bzip2.lib exit 1  # [win]
     - if not exist %LIBRARY_BIN%\\bzip2.dll exit 1  # [win]
