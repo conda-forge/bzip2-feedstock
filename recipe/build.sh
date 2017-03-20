@@ -13,6 +13,6 @@ then
   cp -d libbz2.so* $PREFIX/lib/
 else  # macOS
   $CC -shared -Wl,-install_name -Wl,libbz2.dylib -o libbz2.${PKG_VERSION}.dylib blocksort.o huffman.o crctable.o randtable.o compress.o decompress.o bzlib.o
-  ln -s libbz2.${PKG_VERSION}.dylib libbz2.dylib
-  cp -d libbz2.*dylib $PREFIX/lib/
+  cp libbz2.${PKG_VERSION}.dylib $PREFIX/lib/
+  ln -s libbz2.${PKG_VERSION}.dylib $PREFIX/lib/libbz2.dylib
 fi
