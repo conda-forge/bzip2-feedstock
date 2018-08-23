@@ -1,5 +1,6 @@
 {% set version = "1.0.6" %}
 
+
 package:
   name: bzip2
   version: {{ version }}
@@ -8,6 +9,9 @@ source:
   fn: bzip2-{{ version }}.tar.gz
   url: https://fossies.org/linux/misc/bzip2-{{ version }}.tar.gz
   md5: 00b516f4704d4a7cb50a1d97e6e8e15b
+  patches:
+    - 0001-cross.patch
+    - bzip2recover-CVE-2016-3189.patch
 
 build:
   number: 3002
@@ -17,6 +21,8 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - jom   # [win]
+    - make  # [unix]
 
 test:
   commands:
@@ -68,3 +74,5 @@ extra:
     - jjhelmus
     - pelson
     - jlanga
+    - mingwandroid
+    - msarahan
