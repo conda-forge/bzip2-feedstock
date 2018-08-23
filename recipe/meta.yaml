@@ -14,7 +14,7 @@ source:
     - bzip2recover-CVE-2016-3189.patch
 
 build:
-  number: 3002
+  number: 1002
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
