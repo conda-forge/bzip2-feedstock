@@ -14,7 +14,7 @@ source:
     - bzip2recover-CVE-2016-3189.patch
 
 build:
-  number: 1002
+  number: 1003
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
@@ -46,6 +46,8 @@ test:
     - test -f ${PREFIX}/include/bzlib.h  # [unix]
     - test -f ${PREFIX}/lib/libbz2.a  # [unix]
     - test -f ${PREFIX}/lib/libbz2.so  # [linux]
+    - test -f ${PREFIX}/lib/libbz2.so.1  # [linux]
+    - test -f ${PREFIX}/lib/libbz2.so.1.0  # [linux]
     - test -f ${PREFIX}/lib/libbz2.dylib  # [osx]
     - if not exist %LIBRARY_INC%\\bzlib.h exit 1  # [win]
     - if not exist %LIBRARY_LIB%\\bzip2.lib exit 1  # [win]
