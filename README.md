@@ -1,6 +1,8 @@
 About bzip2
 ===========
 
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+
 Home: http://www.bzip.org/
 
 Package license: bzip2
@@ -108,3 +110,14 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@jakirkham](https://github.com/jakirkham/)
+* [@jjhelmus](https://github.com/jjhelmus/)
+* [@jlanga](https://github.com/jlanga/)
+* [@mingwandroid](https://github.com/mingwandroid/)
+* [@msarahan](https://github.com/msarahan/)
+* [@pelson](https://github.com/pelson/)
+
