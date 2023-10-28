@@ -1,8 +1,8 @@
 c_compiler:
-- vs2019
+- vs2022
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 target_platform:
-- win-64
+- win-arm64
