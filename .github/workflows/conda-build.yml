@@ -24,7 +24,7 @@ jobs:
           - CONFIG: win_arm64_
             UPLOAD_PACKAGES: True
             os: windows
-            runs_on: ['windows', 'x64', 'self-hosted']
+            runs_on: ['windows', 'ARM64', 'self-hosted']
     steps:
 
     - name: Checkout code
