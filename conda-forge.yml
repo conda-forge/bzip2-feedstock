@@ -3,7 +3,10 @@ build_platform:
   linux_ppc64le: linux_64
   osx_arm64: osx_64
   win_arm64: win_64
-self-hosted: true
+github_actions:
+  self_hosted: true
+provider:
+  win_64: github_actions
 conda_forge_output_validation: true
 test_on_native_only: true
 github:
