@@ -5,6 +5,9 @@ build_platform:
   win_arm64: win_arm64
 github_actions:
   self_hosted: true
+  triggers:
+    - push
+    - pull_request
 provider:
   win_arm64: github_actions
 conda_forge_output_validation: true

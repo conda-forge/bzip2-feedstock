@@ -6,6 +6,8 @@ name: Build conda package
 on:
   push:
 
+  pull_request:
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
   cancel-in-progress: true
@@ -80,7 +82,7 @@ jobs:
         ./.scripts/run_osx_build.sh
 
     - name: Install Miniconda for windows
-      uses: conda-incubator/setup-miniconda@main
+      uses: conda-incubator/setup-miniconda@v2
       with:
         miniforge-version: latest
         miniforge-variant: Mambaforge
