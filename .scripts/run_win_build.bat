@@ -34,8 +34,9 @@ if !errorlevel! neq 0 exit /b !errorlevel!
 echo Running build setup
 CALL run_conda_forge_build_setup
 
-
 if !errorlevel! neq 0 exit /b !errorlevel!
+
+type .ci_support\%CONFIG%.yaml
 
 if EXIST LICENSE.txt (
     echo Copying feedstock license
