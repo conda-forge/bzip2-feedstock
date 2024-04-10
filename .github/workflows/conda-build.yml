@@ -82,10 +82,11 @@ jobs:
         ./.scripts/run_osx_build.sh
 
     - name: Install Miniconda for windows
-      uses: conda-incubator/setup-miniconda@v3
+      uses: isuruf/setup-miniconda@install_dir
       with:
         miniforge-version: latest
         miniforge-variant: Mambaforge
+        install_dir: ${{ github.workspace }}
       if: matrix.os == 'windows'
 
     - name: Build on windows
