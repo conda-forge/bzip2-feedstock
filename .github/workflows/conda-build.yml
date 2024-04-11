@@ -86,7 +86,7 @@ jobs:
       with:
         miniforge-version: latest
         miniforge-variant: Mambaforge
-        install-dir: ${{ github.workspace }}
+        install-dir: ${{ github.workspace }}\\miniforge
         architecture: x64
       if: matrix.os == 'windows'
 
