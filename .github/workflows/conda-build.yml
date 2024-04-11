@@ -28,7 +28,7 @@ jobs:
     steps:
 
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Build on Linux
       if: matrix.os == 'ubuntu'
@@ -85,7 +85,7 @@ jobs:
       uses: isuruf/setup-miniconda@install_dir
       with:
         miniforge-version: latest
-        miniforge-variant: Mambaforge
+        miniforge-variant: Miniforge3
         install-dir: ${{ github.workspace }}\\miniforge
         architecture: x64
       if: matrix.os == 'windows'
