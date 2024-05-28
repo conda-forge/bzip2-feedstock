@@ -1,0 +1,2 @@
+github_actions_labels:  # [win and arm64]
+  - self-hosted         # [win and arm64]
