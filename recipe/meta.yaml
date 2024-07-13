@@ -9,9 +9,11 @@ source:
   sha256: ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
   patches:
     - 0001-cross.patch
+    - 0002-Windows-Make-library-name-lowercase.patch
+    - 0003-Windows-Add-dyn-lib-build-rename-libbz2_static.patch
 
 build:
-  number: 6
+  number: 7
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
@@ -19,7 +21,6 @@ requirements:
   build:
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
-    - jom   # [win]
     - make  # [unix]
 
 test:
