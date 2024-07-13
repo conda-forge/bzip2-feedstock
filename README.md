@@ -215,6 +215,7 @@ Feedstock Maintainers
 * [@isuruf](https://github.com/isuruf/)
 * [@jakirkham](https://github.com/jakirkham/)
 * [@jlanga](https://github.com/jlanga/)
+* [@mbargull](https://github.com/mbargull/)
 * [@msarahan](https://github.com/msarahan/)
 * [@pelson](https://github.com/pelson/)
 
