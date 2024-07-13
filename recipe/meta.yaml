@@ -11,12 +11,13 @@ source:
     - 0001-cross.patch
 
 build:
-  number: 5
+  number: 6
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
 requirements:
   build:
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - jom   # [win]
     - make  # [unix]
