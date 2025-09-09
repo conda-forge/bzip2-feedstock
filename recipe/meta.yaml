@@ -5,15 +5,15 @@ package:
   version: {{ version }}
 
 source:
-  url: https://sourceware.org/pub/bzip2/bzip2-{{ version }}.tar.gz
-  sha256: ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
+  url: https://gitlab.com/bzip2/bzip2/-/archive/bzip2-{{ version }}/bzip2-bzip2-{{ version }}.tar.gz
+  sha256: db106b740252669664fd8f3a1c69fe7f689d5cd4b132f82ba82b9afba27627df
   patches:
-    - 0001-cross.patch
-    - 0002-Windows-Make-library-name-lowercase.patch
-    - 0003-Windows-Add-dyn-lib-build-rename-libbz2_static.patch
+    - patches/0001-cross.patch
+    - patches/0002-Windows-Make-library-name-lowercase.patch
+    - patches/0003-Windows-Add-dyn-lib-build-rename-libbz2_static.patch
 
 build:
-  number: 7
+  number: 8
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
@@ -54,7 +54,7 @@ test:
     - if not exist %LIBRARY_LIB%\\libbz2_static.lib exit 1  # [win]
 
 about:
-  home: http://www.bzip.org/
+  home: https://gitlab.com/bzip2/bzip2
   license_family: BSD
   license_file: LICENSE
   license: bzip2-1.0.6
@@ -64,7 +64,7 @@ about:
     compresses files to within 10% to 15% of the best available techniques,
     whilst being around twice as fast at compression and six times faster
     at decompression.
-  doc_url: http://www.bzip.org/docs.html
+  dev_url: https://gitlab.com/bzip2/bzip2
 
 extra:
   recipe-maintainers:

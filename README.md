@@ -3,13 +3,13 @@ About bzip2-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bzip2-feedstock/blob/main/LICENSE.txt)
 
-Home: http://www.bzip.org/
+Home: https://gitlab.com/bzip2/bzip2
 
 Package license: bzip2-1.0.6
 
 Summary: high-quality data compressor
 
-Documentation: http://www.bzip.org/docs.html
+Development: https://gitlab.com/bzip2/bzip2
 
 Bzip2 is a freely available high-quality data compressor. It typically
 compresses files to within 10% to 15% of the best available techniques,
