@@ -2,6 +2,8 @@
 
 set -ex
 
+rm -rf ${PREFIX}/man
+
 # toolchain flags + bzip flags + fpic
 export CFLAGS="${CFLAGS} -Wall -Winline -O2 -g -D_FILE_OFFSET_BITS=64 -fPIC"
 USED_CC=${GCC:-${CC}}
@@ -17,3 +19,6 @@ elif [[ ${target_platform} == osx-* ]]; then
   cp libbz2.${PKG_VERSION}.dylib ${PREFIX}/lib/
   ln -s libbz2.${PKG_VERSION}.dylib ${PREFIX}/lib/libbz2.dylib
 fi
+
+mkdir -p ${PREFIX}/share/man
+mv ${PREFIX}/man/* ${PREFIX}/share/man
